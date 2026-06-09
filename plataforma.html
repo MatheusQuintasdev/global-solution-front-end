@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BraTech | Plataforma</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">BraTech</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="plataforma.html" class="active">Plataforma</a></li>
+        <li><a href="simulador.html">Simulador</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="integrantes.html">Equipe</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+      <div id="menu-btn">☰</div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="hero-content">
+        <h1>Nossa <span class="highlight">Plataforma</span></h1>
+        <p>Tecnologia de ponta para conectar pacientes a médicos em minutos, de qualquer lugar do Brasil.</p>
+        <a href="simulador.html" class="btn-primary">Testar Simulação</a>
+      </div>
+    </section>
+
+    <section class="fluxo-section">
+      <div class="section-header">
+        <h2>Como Funciona</h2>
+        <p>Do cadastro à receita em menos de 12 minutos</p>
+      </div>
+
+      <div class="fluxo-timeline">
+        <div class="fluxo-step" data-step="1">
+          <div class="step-icon">👤</div>
+          <div class="step-content">
+            <h3>Cadastro</h3>
+            <p>Crie sua conta em menos de 2 minutos com CPF e dados básicos. Totalmente seguro e criptografado.</p>
+          </div>
+          <div class="step-connector">↓</div>
+        </div>
+
+        <div class="fluxo-step" data-step="2">
+          <div class="step-icon">🤖</div>
+          <div class="step-content">
+            <h3>Triagem por IA</h3>
+            <p>Nossa inteligência artificial analisa seus sintomas e determina a especialidade mais adequada para o seu caso.</p>
+          </div>
+          <div class="step-connector">↓</div>
+        </div>
+
+        <div class="fluxo-step" data-step="3">
+          <div class="step-icon">🩺</div>
+          <div class="step-content">
+            <h3>Consulta</h3>
+            <p>Video consulta com médico especialista em até 12 minutos. Segura, rápida e com diagnóstico preciso.</p>
+          </div>
+          <div class="step-connector">↓</div>
+        </div>
+
+        <div class="fluxo-step" data-step="4">
+          <div class="step-icon">💊</div>
+          <div class="step-content">
+            <h3>Receita Digital</h3>
+            <p>Receita com QR Code válida em qualquer farmácia do Brasil, enviada diretamente para o seu celular.</p>
+          </div>
+          <div class="step-connector">↓</div>
+        </div>
+
+        <div class="fluxo-step" data-step="5">
+          <div class="step-icon">📱</div>
+          <div class="step-content">
+            <h3>Follow-up</h3>
+            <p>Acompanhamento automático via WhatsApp para garantir sua recuperação e marcar retornos quando necessário.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="recursos-section">
+      <div class="section-header">
+        <h2>Recursos da Plataforma</h2>
+        <p>Tudo que você precisa em um único lugar</p>
+      </div>
+
+      <div class="recursos-grid">
+        <div class="recurso-card">
+          <div class="recurso-icon">🔒</div>
+          <h3>Segurança Total</h3>
+          <p>Dados criptografados com padrão bancário. Conformidade com LGPD e CFM.</p>
+        </div>
+        <div class="recurso-card">
+          <div class="recurso-icon">🌎</div>
+          <h3>Acesso Nacional</h3>
+          <p>Disponível em todos os estados do Brasil, inclusive regiões remotas.</p>
+        </div>
+        <div class="recurso-card">
+          <div class="recurso-icon">⚡</div>
+          <h3>Resposta Rápida</h3>
+          <p>Médico disponível em até 12 minutos, 24 horas por dia, 7 dias por semana.</p>
+        </div>
+        <div class="recurso-card">
+          <div class="recurso-icon">💰</div>
+          <h3>Acessível</h3>
+          <p>Planos a partir de R$29/mês. Muito mais barato que uma consulta particular.</p>
+        </div>
+        <div class="recurso-card">
+          <div class="recurso-icon">📋</div>
+          <h3>Histórico Médico</h3>
+          <p>Todas as suas consultas e receitas salvas em um único perfil seguro.</p>
+        </div>
+        <div class="recurso-card">
+          <div class="recurso-icon">🤝</div>
+          <h3>+500 Médicos</h3>
+          <p>Rede de especialistas em mais de 30 áreas da medicina.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="demo-section">
+      <div class="demo-content">
+        <h2>Veja como é simples</h2>
+        <p>Clique abaixo para simular uma consulta completa na plataforma BraTech.</p>
+        <button id="btn-demo" class="btn-primary">Testar Consulta</button>
+      </div>
+    </section>
+
+    <div id="modal-demo" class="modal hidden">
+      <div class="modal-content">
+        <button class="modal-close" id="btn-fechar-modal">✕</button>
+        <h2>Simulação de Consulta</h2>
+        <div class="modal-steps">
+          <div class="modal-step active" id="modal-step-1">
+            <div class="modal-icon">🤖</div>
+            <h3>Triagem IA iniciada</h3>
+            <p>Analisando seus sintomas...</p>
+          </div>
+          <div class="modal-step" id="modal-step-2">
+            <div class="modal-icon">🩺</div>
+            <h3>Médico encontrado!</h3>
+            <p>Dr. Carlos Mendes — Clínico Geral<br>Aguardando em 3 minutos</p>
+          </div>
+          <div class="modal-step" id="modal-step-3">
+            <div class="modal-icon">✅</div>
+            <h3>Consulta concluída</h3>
+            <p>Receita enviada para seu celular via QR Code!</p>
+          </div>
+        </div>
+        <div class="modal-progress">
+          <div class="modal-progress-bar" id="modal-progress-bar"></div>
+        </div>
+        <a href="simulador.html" class="btn-primary">Ir para o Simulador completo</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 BraTech | 1TDSR | FIAP Global Solution 2026</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
