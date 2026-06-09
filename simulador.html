@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BraTech | Simulador de Triagem</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">BraTech</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="plataforma.html">Plataforma</a></li>
+        <li><a href="simulador.html" class="active">Simulador</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="integrantes.html">Equipe</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+      <div id="menu-btn">☰</div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="hero-content">
+        <h1>Simulador de <span class="highlight">Triagem por IA</span></h1>
+        <p>Selecione seus sintomas e veja como nossa IA direciona você ao especialista certo.</p>
+      </div>
+    </section>
+
+    <section class="simulador-section">
+      <div class="simulador-container">
+
+        <div id="painel-sintomas" class="simulador-painel">
+          <div class="simulador-header">
+            <h2>🤖 Triagem Inteligente</h2>
+            <p>Selecione os sintomas que você está sentindo:</p>
+          </div>
+
+          <div class="sintomas-grid">
+            <label class="sintoma-item">
+              <input type="checkbox" name="sintoma" value="febre"> 
+              <span class="sintoma-box">
+                <span class="sintoma-emoji">🌡️</span>
+                <span>Febre</span>
+              </span>
+            </label>
+            <label class="sintoma-item">
+              <input type="checkbox" name="sintoma" value="tosse">
+              <span class="sintoma-box">
+                <span class="sintoma-emoji">😷</span>
+                <span>Tosse</span>
+              </span>
+            </label>
+            <label class="sintoma-item">
+              <input type="checkbox" name="sintoma" value="dor_cabeca">
+              <span class="sintoma-box">
+                <span class="sintoma-emoji">🤕</span>
+                <span>Dor de cabeça</span>
+              </span>
+            </label>
+            <label class="sintoma-item">
+              <input type="checkbox" name="sintoma" value="dor_garganta">
+              <span class="sintoma-box">
+                <span class="sintoma-emoji">🫁</span>
+                <span>Dor de garganta</span>
+              </span>
+            </label>
+            <label class="sintoma-item">
+              <input type="checkbox" name="sintoma" value="dor_peito">
+              <span class="sintoma-box">
+                <span class="sintoma-emoji">💔</span>
+                <span>Dor no peito</span>
+              </span>
+            </label>
+            <label class="sintoma-item">
+              <input type="checkbox" name="sintoma" value="falta_ar">
+              <span class="sintoma-box">
+                <span class="sintoma-emoji">😤</span>
+                <span>Falta de ar</span>
+              </span>
+            </label>
+            <label class="sintoma-item">
+              <input type="checkbox" name="sintoma" value="nausea">
+              <span class="sintoma-box">
+                <span class="sintoma-emoji">🤢</span>
+                <span>Náusea / Vômito</span>
+              </span>
+            </label>
+            <label class="sintoma-item">
+              <input type="checkbox" name="sintoma" value="dor_abdominal">
+              <span class="sintoma-box">
+                <span class="sintoma-emoji">🫃</span>
+                <span>Dor abdominal</span>
+              </span>
+            </label>
+            <label class="sintoma-item">
+              <input type="checkbox" name="sintoma" value="cansaco">
+              <span class="sintoma-box">
+                <span class="sintoma-emoji">😴</span>
+                <span>Cansaço extremo</span>
+              </span>
+            </label>
+            <label class="sintoma-item">
+              <input type="checkbox" name="sintoma" value="dor_costas">
+              <span class="sintoma-box">
+                <span class="sintoma-emoji">🦴</span>
+                <span>Dor nas costas</span>
+              </span>
+            </label>
+            <label class="sintoma-item">
+              <input type="checkbox" name="sintoma" value="alergia">
+              <span class="sintoma-box">
+                <span class="sintoma-emoji">🤧</span>
+                <span>Alergia / Coceira</span>
+              </span>
+            </label>
+            <label class="sintoma-item">
+              <input type="checkbox" name="sintoma" value="visao">
+              <span class="sintoma-box">
+                <span class="sintoma-emoji">👁️</span>
+                <span>Problema de visão</span>
+              </span>
+            </label>
+          </div>
+
+          <div id="aviso-selecao" class="aviso-erro hidden">⚠️ Selecione ao menos um sintoma antes de analisar.</div>
+
+          <div class="simulador-actions">
+            <button id="btn-analisar" class="btn-primary btn-full">🔍 Analisar Sintomas</button>
+            <button id="btn-limpar" class="btn-secondary">Limpar seleção</button>
+          </div>
+        </div>
+
+        <div id="painel-resultado" class="simulador-resultado hidden">
+          <div class="resultado-header">
+            <h2>📊 Resultado da Triagem</h2>
+          </div>
+
+          <div class="resultado-sintomas">
+            <h4>Sintomas informados:</h4>
+            <div id="lista-sintomas-selecionados" class="tags-sintomas"></div>
+          </div>
+
+          <div class="resultado-cards">
+            <div class="resultado-card prioridade-card">
+              <span class="resultado-label">Prioridade</span>
+              <span id="resultado-prioridade" class="resultado-valor"></span>
+            </div>
+            <div class="resultado-card especialista-card">
+              <span class="resultado-label">Especialista indicado</span>
+              <span id="resultado-especialista" class="resultado-valor"></span>
+            </div>
+            <div class="resultado-card tempo-card">
+              <span class="resultado-label">Tempo estimado de espera</span>
+              <span id="resultado-tempo" class="resultado-valor"></span>
+            </div>
+          </div>
+
+          <div id="resultado-obs" class="resultado-obs"></div>
+
+          <div class="resultado-actions">
+            <button id="btn-nova-triagem" class="btn-primary">Nova Triagem</button>
+            <a href="contato.html" class="btn-secondary">Falar com Equipe</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="aviso-section">
+      <div class="aviso-box">
+        <span>⚕️</span>
+        <p><strong>Aviso importante:</strong> Este simulador é apenas educacional e não substitui uma consulta médica real. Em caso de emergência, ligue 192 (SAMU) ou 193 (Bombeiros).</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 BraTech | 1TDSR | FIAP Global Solution 2026</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
