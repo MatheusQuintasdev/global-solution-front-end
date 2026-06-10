@@ -115,7 +115,7 @@ Para dúvidas ou mais informações sobre o projeto, pode nos enviar uma mensage
 
 ## 📸 Screenshots
 
-> Adicione prints das páginas aqui antes da entrega:
+> Siga o caminho para as screenshots:
 > - `assets/screenshot-home.png`
 > - `assets/screenshot-simulador.png`
 > - `assets/screenshot-plataforma.png`
